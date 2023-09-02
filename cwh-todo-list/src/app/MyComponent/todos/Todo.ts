@@ -1,7 +1,6 @@
 export class Todo{
-    sno: number
-    title: string
-    desc: string
-    active: boolean
-    
+    sno: number=0    
+    title: string=''
+    desc: string=''
+    active: boolean=false
 }
