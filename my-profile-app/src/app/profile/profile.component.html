@@ -1,0 +1,24 @@
+<div class="container">
+  <form (ngSubmit)="onSelect">
+
+    <div class="wrapper">
+      <img [src]="initialUrl" class="my_file" height="150px" width="150px" alt="">
+      <input type="file" value="" id="img" style="display:none;" (change)="onSelect($event)" />
+      <label for="img" class="my_files">upload image</label><br><br>
+
+    </div>
+
+    <label class="fname" for="firstname">First Name</label><br>
+    <input type="text" [(ngModel)]="profile.firstname" id="fname" name="firstname" placeholder="first name.."><br><br>
+
+    <label for="lastname">Last Name</label><br>
+    <input type="text" id="lname" [(ngModel)]="profile.lastname" name="lastname" placeholder="last name"><br><br>
+
+    <label for="email">Email</label><br>
+    <input type="email" id="email" [(ngModel)]="profile.email" name="email" placeholder="Email"><br><br>
+
+    <button class="btn" (click)="onSubmit()" type="submit">save</button>
+
+
+  </form>
+</div>
