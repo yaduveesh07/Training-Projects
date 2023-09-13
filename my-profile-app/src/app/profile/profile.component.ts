@@ -34,6 +34,7 @@ export class ProfileComponent implements OnInit {
     if (this.profile.imageurl) {
       this.initialUrl = this.profile.imageurl;
     }
+
     else {
       this.initialUrl = '/assets/images/add-image.jpg';
     }
@@ -48,7 +49,16 @@ export class ProfileComponent implements OnInit {
   }
 
   get firstName() {
+    console.log(this.profileForm);
     return this.profileForm.get('firstname');
+  }
+
+  get lastName() {
+    return this.profileForm.get('lastname');
+  }
+
+  get email() {
+    return this.profileForm.get('email');
   }
 
   onSubmit() {
@@ -78,26 +88,4 @@ export class ProfileComponent implements OnInit {
 
 
 
-
-
-
-
-
-
-// this.form = this.formBuilder.group(
-//   {
-//     firstname: ['', 
-//         Validators.required,
-//         Validators.minLength(6),
-//         Validators.maxLength(20)
-//     ],
-//      lastname: ['', 
-//         Validators.required,
-//         Validators.minLength(6),
-//         Validators.maxLength(20)
-//     ],
-//     email: ['', [Validators.required, Validators.email]],
-//     acceptTerms: [false, Validators.requiredTrue]
-//   },
-// );
 
