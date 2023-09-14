@@ -29,7 +29,7 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     const profileData: Profile | null = JSON.parse(localStorage.getItem("profile")!)
-    console.log(profileData);
+    // console.log(profileData);
     this.profile = profileData as Profile;
     if (this.profile.imageurl) {
       this.initialUrl = this.profile.imageurl;
@@ -49,7 +49,7 @@ export class ProfileComponent implements OnInit {
   }
 
   get firstName() {
-    console.log(this.profileForm);
+    //console.log(this.profileForm);
     return this.profileForm.get('firstname');
   }
 

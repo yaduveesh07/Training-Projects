@@ -1,5 +1,14 @@
-
+<!-- <div *ngIf="newdata"> {{ newdata }} </div> -->
 
 <section class="results">
-  <app-profile ></app-profile>
+  <app-profile></app-profile>
 </section>
+
+<table class = 'table table-striped' >
+  <tr *ngFor = 'let f of newdata'>
+      <td>{{f.summary}}</td>
+      <td>{{f.date}}</td>
+      <td>{{f.temperatureC}}</td>
+      <td>{{f.temperatureF}}</td>
+  </tr>
+</table>

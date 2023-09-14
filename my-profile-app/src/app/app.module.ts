@@ -6,14 +6,15 @@ import { AppComponent } from './app.component';
 import { ProfileComponent } from "./profile/profile.component";
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import { WFCserviceService } from './wfcservice.service';
 
 @NgModule({
     declarations: [
         AppComponent,
-        ProfileComponent
-       
+        ProfileComponent,
     ],
-    providers: [],
+    providers: [WFCserviceService],
     bootstrap: [AppComponent],
     imports: [
         BrowserModule,
@@ -21,7 +22,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
         BrowserModule,
         CommonModule,
         FormsModule,
-        ReactiveFormsModule
+        ReactiveFormsModule,
+        HttpClientModule
     ]
 })
 export class AppModule { }
