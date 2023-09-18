@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class WFCserviceService {
-  url = "https://localhost:7021/WeatherForecast"
+  url = "https://localhost:7021/ProfileApp"
 
   constructor(private http: HttpClient) { }
 

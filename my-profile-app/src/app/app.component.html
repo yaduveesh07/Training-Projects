@@ -4,11 +4,26 @@
   <app-profile></app-profile>
 </section>
 
-<table class = 'table table-striped' >
+<!-- <table class = 'table table-striped' >
   <tr *ngFor = 'let f of newdata'>
       <td>{{f.summary}}</td>
       <td>{{f.date}}</td>
       <td>{{f.temperatureC}}</td>
       <td>{{f.temperatureF}}</td>
+  </tr>
+</table> -->
+
+<table class = 'table table-striped' >
+  <tr>
+    <td>Id</td>
+    <td>First Name</td>
+    <td>Last Name</td>
+    <td>Email</td>
+  </tr>
+  <tr *ngFor = 'let f of newdata'>
+      <td>{{f.id}}</td>
+      <td>{{f.firstname}}</td>
+      <td>{{f.lastname}}</td>
+      <td>{{f.email}}</td>
   </tr>
 </table>
