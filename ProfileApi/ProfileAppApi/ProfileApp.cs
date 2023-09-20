@@ -1,8 +1,10 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace ProfileApp
 {
     public class ProfileApp
     {
-        public int id  { get; set; }
+        public int id { get; set; }
 
         public string firstname { get; set; }
 
