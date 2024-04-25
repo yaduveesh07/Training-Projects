@@ -1,0 +1,24 @@
+/* Align button to the right side */
+.d-flex {
+  display: flex;
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+
+/* Adjust button color */
+.mat-flat-button {
+  background-color: primary;
+  color: white; /* Text color */
+}
+
+.mat-flat-button:hover {
+  background-color: var(--primary-hover); /* Adjust hover color if needed */
+}
+
+button {
+  height: 30px;
+  color: blue;
+  background-color: revert;
+}

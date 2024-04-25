@@ -1,0 +1,64 @@
+<!-- <mat-card class="cardWithShadow">
+  <mat-card-content>
+    <div class="d-flex align-items-center">
+      <mat-card-title>Taskboard</mat-card-title>
+    </div>
+
+    <div
+      class="row taskboard m-t-24"
+      cdkDropListGroup
+      *ngIf="(taskGrid$ | async)! as taskGrid"
+    >
+      <div *ngFor="let column of taskColumns" class="col-lg-3">
+        <app-child
+          [statusHeader]="column.statusHeader"
+          [tasks]="column.tasks"
+          [statusColor]="column.statusColorClass"
+          [headerColor]="column.headerColorClass"
+          >>
+        </app-child>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card> -->
+
+<!-- my-form.component.html -->
+
+<!-- my-form.component.html -->
+
+<!-- <form [formGroup]="percentageForm" (ngSubmit)="submitPercentage()">
+  <div class="form-group">
+    <label for="currencySelect">Currency:</label>
+    <select class="form-control" formControlName="currency" id="currencySelect">
+      <option value="INR">₹ (Indian Rupee)</option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form> -->
+
+<!-- <div *ngFor="let series of series; let i = index">
+  <input type="checkbox" (change)="toggleSeriesVisibility(i)" />
+  <label>{{ series.name }}</label>
+</div> -->
+
+<div id="chart">
+  <apx-chart
+    [series]="chartOptions.series"
+    [chart]="chartOptions.chart"
+    [xaxis]="chartOptions.xaxis"
+  >
+  </apx-chart>
+</div>
+
+<!-- <div class="toggle-buttons-container m-l-auto">
+  <button (click)="toggleView('week')" [class.active]="view === 'week'">
+    Wk
+  </button>
+  <button (click)="toggleView('month')" [class.active]="view === 'month'">
+    Mo
+  </button>
+</div>
+
+<div *ngIf="view === 'week'"></div>
+
+<div *ngIf="view === 'month'"></div> -->
