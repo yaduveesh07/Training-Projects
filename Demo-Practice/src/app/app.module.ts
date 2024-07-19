@@ -17,7 +17,6 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatStepperModule } from '@angular/material/stepper';
 import { EnumKeyPipe, EnumToDropdownPipe } from './services/enum-key.pipe';
 import { MatDialogModule } from '@angular/material/dialog';
-import { GridDatatableComponent } from './grid-datatable/grid-datatable.component';
 import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -26,18 +25,26 @@ import { MatInputModule } from '@angular/material/input';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatIconModule } from '@angular/material/icon';
-import { ChildComponent } from './child/child.component';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { NgxApexchartsModule } from 'ngx-apexcharts';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { TaskDetailComponent } from './task-detail/task-detail.component';
+import { ContactDetailComponent } from './contact-detail/contact-detail.component';
+import { NameDetailComponent } from './name-detail/name-detail.component';
+import { AddressDetailComponent } from './address-detail/address-detail.component';
+import { GridDatatableComponent } from './grid-datatable/grid-datatable.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GridDatatableComponent,
     EnumKeyPipe,
-    ChildComponent,
     EnumToDropdownPipe,
+    TaskDetailComponent,
+    ContactDetailComponent,
+    NameDetailComponent,
+    AddressDetailComponent,
+    GridDatatableComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,6 +71,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     MatAutocompleteModule,
     NgxApexchartsModule,
     MatSlideToggleModule,
+    AppRoutingModule,
+    MatDatepickerModule,
   ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],

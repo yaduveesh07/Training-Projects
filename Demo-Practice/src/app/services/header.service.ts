@@ -1,47 +1,38 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { ITEMS, Task, TaskStatus } from './header.model';
-
-export interface TaskGrid {
-  todos: Task[];
-}
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
-export class TaskService {
-  private taskGridSubject: BehaviorSubject<TaskGrid> =
-    new BehaviorSubject<TaskGrid>({ todos: [] });
+export class AppStateService {
+  private applicationReady$ = new BehaviorSubject<boolean>(false);
 
-  constructor() {
-    this.generateTaskGrid();
+  // Returns an observable for applicationReady
+  useApplicationReady$() {
+    return this.applicationReady$.asObservable(); // Corrected to call asObservable
   }
 
-  getTaskGrid(): Observable<TaskGrid> {
-    return this.taskGridSubject.asObservable();
-  }
-
-  private generateTaskGrid(): void {
-    const taskGrid: TaskGrid = {
-      todos: [],
-    };
-
-    // Initialize task grid using provided ITEMS array
-
-    ITEMS.forEach((item) => {
-      switch (item.statusId) {
-        case TaskStatus.Todos:
-          taskGrid.todos.push(item);
-          break;
-        // Add other cases as needed
-        default:
-          break;
-      }
-    });
-
-    this.taskGridSubject.next(taskGrid);
+  // Method to update the applicationReady state
+  setApplicationReady(isReady: boolean): void {
+    this.applicationReady$.next(isReady);
   }
 }
+
+// import { Injectable } from '@angular/core';
+// import { BehaviorSubject, Observable } from 'rxjs';
+// import { ITEMS, Task, TaskStatus } from './header.model';
+// import { HttpClient } from '@angular/common/http';
+
+// export interface TaskGrid {
+//   todos: Task[];
+// }
+
+// @Injectable({
+//   providedIn: 'root',
+// })
+// export class TaskService {
+//   constructor(private http: HttpClient) {}
+// }
 
 // import { Injectable } from '@angular/core';
 // import { Observable, of } from 'rxjs';
